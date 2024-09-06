@@ -1,13 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>File Upload Project</title>
-	<style>
-  <?php include "styles.css" ?>
-</style>
-</head>
-<body>
+
 	<?php
+
+	include __DIR__."/inc/header.inc.php";
 		if(isset($_FILES['file'])) {
 			$target_dir = "uploads/";
 			$target_file = $target_dir . basename($_FILES['file']['name']); 
@@ -44,5 +38,4 @@
 			}
 		}
 	?>
-</body>
-</html>
+<?=include __DIR__. "/inc/footer.inc.php";?>
